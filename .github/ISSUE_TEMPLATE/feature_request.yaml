@@ -1,0 +1,35 @@
+name: 功能请求（Suggest using Simplified Chinese to answer）
+description: 提出建议
+title: "suggest"
+labels: [suggest, Needs Triage]
+body:
+  - type: textarea
+    attributes:
+      label: 需要什么功能？
+      description: 简明地描述您需要的功能。
+    validations:
+      required: true
+  - type: input
+    id: contact
+    attributes:
+      label: 让我联系你
+      description: 怎么让我联系？你可以填入邮箱！
+      placeholder: email@email.com
+    validations:
+      required: false
+  - type: dropdown
+    attributes:
+      label: 是否允许我联系你？
+      options:
+        - 是的
+        - 不是
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: 还有什么信息可以提供的？
+      description: |
+       链接？引用？任何可以让我们了解您遇到的问题的更多背景信息！
+       提示： 您可以通过单击此区域以突出显示图像或日志文件，然后将文件拖入来附加图像或日志文件。
+    validations:
+      required: false

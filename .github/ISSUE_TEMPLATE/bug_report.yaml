@@ -1,0 +1,69 @@
+name: 🐞 错误报告（Suggest using Simplified Chinese to answer）
+description: 错误报告
+title: "[Bug]"
+labels: [Bug, Needs Triage]
+body:
+  - type: checkboxes
+    attributes:
+      label: 这是否存在现有问题？
+      description: 请搜索以查看您遇到的错误是否已存在问题。
+      options:
+        - label: 我已经搜索了现有问题
+          required: true
+  - type: dropdown
+    id: browsers
+    attributes:
+      label: 你需要为下列哪个进行错误报告？
+      multiple: true
+      options:
+        - github page上的网站
+        - Phantom-Shadow-Kit
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: 当前程序出现的行为
+      description: 简明地描述您经历的事情。
+      render: markdown
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: 能不能用步骤告诉我你是如何操作的，然后报错？
+      placeholder: |
+        1. 点击某个页面...
+        2. 使用了什么操作...
+        3. 干了什么？
+  - type: dropdown
+    attributes:
+      label: 当程序出行错误时，有没有正常提示？
+      options:
+        - 是的
+        - 没有
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: 使用环境及信息
+      description: |
+        示例:
+          **操作系统**: Ubuntu 20.04
+          **系统版本**: 13.14.0
+          **程序版本**: 7.6.3
+          **错误发生在哪个页面？（请简要描述，比如录音界面就说录音界面，或主界面等）** 
+      value: |
+        操作系统:
+        系统版本:
+        程序版本:
+        错误xxx页面中。
+      render: markdown
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: 还有什么信息可以提供的？
+      description: |
+       链接？引用？任何可以让我们了解您遇到的问题的更多背景信息！
+       提示： 您可以通过单击此区域以突出显示图像或日志文件，然后将文件拖入来附加图像或日志文件。
+    validations:
+      required: false
