@@ -3,6 +3,16 @@ description: 提出建议
 title: "suggest"
 labels: [suggest, Needs Triage]
 body:
+  - type: dropdown
+    id: browsers
+    attributes:
+      label: 你需要为下列哪个进行功能请求？
+      multiple: true
+      options:
+        - github page上的网站
+        - Phantom-Shadow-Kit
+    validations:
+      required: true
   - type: textarea
     attributes:
       label: 需要什么功能？
